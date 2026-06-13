@@ -1,13 +1,18 @@
 Starbucks-CICD-Project
 ----------------------
-
 # Project-Overview
+
+![Starbucks Clone Deployment](https://github.com/user-attachments/assets/6b654f47-9537-4b88-9584-41c760fc49ac)
 
 # Tech-stack
 
 Server(Rhel9)..1 [Take high configure]
 
 take. volume memory 70GB
+
+# Deployment Stages:
+
+<img width="966" alt="Screenshot 2024-09-15 at 7 20 49 AM" src="https://github.com/user-attachments/assets/ddb5e618-79ab-49b3-8f13-b5114824eec3">
    
 # Installation- process.
 
