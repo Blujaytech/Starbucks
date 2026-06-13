@@ -196,7 +196,7 @@ Starbucks-CICD-Project
 
 1. Server(Rhel9)..1 [Take high configure]
 
-# Installation- packages.
+# Installation- process.
 
 # Docker-Installation
 
