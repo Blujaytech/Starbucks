@@ -101,6 +101,7 @@ systemctl status jenkins
 ```
 cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
+# Trivy-Installation
 
 ```
 cat << EOF | sudo tee -a /etc/yum.repos.d/trivy.repo
@@ -116,3 +117,20 @@ EOF
 ```
 sudo yum -y install trivy
 ```
+
+```
+http: <PlubicIP:8080> ---Jenkins-server
+http: <PlubicIP:9000> ---SonarQube
+```
+
+# Jenkins-Plugin
+
+nodejs
+sonarqubescanner
+sonarqubeQualitygate
+OWASP
+Eclips
+Docker pipeline
+Docker Comman
+Docker
+PipelineStageView
