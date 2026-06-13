@@ -186,3 +186,78 @@ pipeline {
 }
 
 ```
+
+Starbucks-CICD-Project
+----------------------
+
+# Project-Overview
+
+# Tech-stack
+
+1. Server(Rhel9)..1 [Take high configure]
+
+# Installation- packages.
+
+# Docker-Installation
+
+vi docker.sh 
+
+```
+#!/bin/bash
+
+#check whether root user or not
+R="\e[31m"
+N="\e[0m"
+
+yum install -y yum-utils
+yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
+yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+systemctl start docker
+systemctl enable docker
+usermod -aG docker ec2-user
+echo -e "$R Logout and Login again $N"
+
+```
+sh docker.sh
+```
+
+```
+curl -sSfL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh | sh -s -- -b /usr/local/bin
+
+```
+sudo chmod 777 /var/run/docker.sock
+```
+
+# Jenkins-Installation.
+
+```
+curl -L -o /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+```
+
+```
+rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+```
+
+```
+dnf install java-21-openjdk java-21-openjdk-devel -y
+```
+
+```
+yum install -y jenkins
+```
+
+```
+systemctl enable jenkins
+```
+
+```
+systemctl start jenkins
+```
+
+```
+systemctl status jenkins
+```
+
+```
+cat /var/lib/jenkins/secrets/initialAdminPassword
+```
