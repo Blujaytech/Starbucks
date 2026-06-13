@@ -228,6 +228,18 @@ curl -sSfL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh | 
 sudo chmod 777 /var/run/docker.sock
 ```
 
+```
+docker run -d -p 9000:9000 --name sonarqube   -v sonarqube_data:/opt/sonarqube/data   -v sonarqube_logs:/opt/sonarqube/logs   -v sonarqube_extensions:/opt/sonarqube/extensions   sonarqube:lts-community
+```
+
+```
+docker ps
+```
+
+```
+docker logs -f sonarqube
+```
+
 # Jenkins-Installation.
 
 ```
