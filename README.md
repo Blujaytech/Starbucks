@@ -88,6 +88,8 @@ lvextend -L +3G /dev/mapper/RootVG-varVol
 xfs_growfs /var
 echo "cachedir=/var/tmp/dnf-cache" >> /etc/dnf/dnf.conf
 dnf clean all
+```
+```
 dnf install java-21-openjdk-headless -y
 ```
 dnf install java-21-openjdk java-21-openjdk-devel -y
