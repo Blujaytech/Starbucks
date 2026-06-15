@@ -81,8 +81,16 @@ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 ```
 
 ```
-dnf install java-21-openjdk java-21-openjdk-devel -y
+du -sh /var/lib/* 2>/dev/null | sort -rh | head -10
+df -h /var
+vgdisplay RootVG | grep -E "Free|Size"
+lvextend -L +3G /dev/mapper/RootVG-varVol
+xfs_growfs /var
+echo "cachedir=/var/tmp/dnf-cache" >> /etc/dnf/dnf.conf
+dnf clean all
+dnf install java-21-openjdk-headless -y
 ```
+dnf install java-21-openjdk java-21-openjdk-devel -y
 
 ```
 yum install -y jenkins
