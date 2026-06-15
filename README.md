@@ -90,10 +90,12 @@ echo "cachedir=/var/tmp/dnf-cache" >> /etc/dnf/dnf.conf
 dnf clean all
 ```
 ```
-dnf install java-21-openjdk-headless -y
-```
+yum clean allyum makecache
+
 dnf install java-21-openjdk java-21-openjdk-devel -y
 
+java --version
+```
 ```
 yum install -y jenkins
 ```
