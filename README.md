@@ -141,12 +141,12 @@ http: <PlubicIP:9000> ---SonarQube
 
 ```
 nodejs
-sonarqubescanner
-sonarqubeQualitygate
+sonarqube scanner
+sonarqube Qualitygate
 OWASP
 Eclips
 Docker pipeline
 Docker Comman
 Docker
-PipelineStageView
+Pipeline StageView
 ```
